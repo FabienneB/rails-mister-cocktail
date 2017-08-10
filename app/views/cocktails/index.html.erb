@@ -1,6 +1,6 @@
-<h1>All our cocktails</h1>
 
-  <ul>
+
+<!--   <ul class = "list-unstyled">
     <% @cocktails.each do |cocktail| %>
       <li>
       <%= link_to cocktail.name.capitalize, cocktail_path(cocktail.id) %>
@@ -9,8 +9,23 @@
     <% end %>
 
   </ul>
+ -->
 
 
-
-<%= link_to "Add a cocktail", new_cocktail_path %>
-
+<div class="container cards-spacing">
+  <h1>All our cocktails</h1>
+  <div class="row">
+  <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card">
+        <div class="card-description">
+          <h2> <%= link_to cocktail.name.capitalize, cocktail_path(cocktail.id) %></h2>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <div class="btn-centered">
+    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-success btn-green" %>
+  </div>
+</div>

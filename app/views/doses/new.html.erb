@@ -1,13 +1,19 @@
-<h1>Add a dose</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <h1>Add a dose</h1>
+      <ul>
+        <% @dose.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+      <%= simple_form_for [@cocktail, @dose] do |d| %>
+        <%= d.association :ingredient %>
+        <%= d.input :description %>
+        <%= d.submit 'Create a dose' , class: "btn btn-success"%>
+      <% end %>
+  </div>
+  </div>
+</div>
 
-<ul>
-  <% @dose.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
-  <% end %>
-</ul>
 
-<%= simple_form_for [@cocktail, @dose] do |d| %>
-  <%= d.association :ingredient %>
-  <%= d.input :description %>
-  <%= d.submit 'Create a dose' %>
-<% end %>

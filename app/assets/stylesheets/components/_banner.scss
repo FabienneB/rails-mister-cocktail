@@ -1,0 +1,21 @@
+.wrapper {
+background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url('img.jpg');
+background-size: cover;
+background-position: center;
+height: 55vh;
+display: flex;
+justify-content : center;
+align-items: center;
+margin-bottom: 15px;
+}
+
+.content {
+  width: 900px;
+  text-align: center;
+  h2 {
+    font-size: 50px;
+    color: green;
+    opacity: 0.9;
+    font-weight: bolder;
+  }
+}
