@@ -1,8 +1,13 @@
 <h1>Add a dose</h1>
 
-<%= simple_form_for [@cocktail, @dose] do |d| %>
-  <%= d.input :descripton %>
-  <%= d.submit 'GO !' %>
-<% end %>
+<ul>
+  <% @dose.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+</ul>
 
-<%= "Back", cocktails_path %>
+<%= simple_form_for [@cocktail, @dose] do |d| %>
+  <%= d.association :ingredient %>
+  <%= d.input :description %>
+  <%= d.submit 'Create a dose' %>
+<% end %>
