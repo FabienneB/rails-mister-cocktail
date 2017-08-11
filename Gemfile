@@ -34,8 +34,13 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'figaro'
+
 
 ruby '2.3.4'
+gem 'cloudinary', '1.1.7'
+gem 'attachinary', github: 'assembler/attachinary'
+gem 'jquery-fileupload-rails'
 
 # front-end
 

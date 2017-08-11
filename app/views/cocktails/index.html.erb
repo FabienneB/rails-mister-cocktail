@@ -17,11 +17,20 @@
   <div class="row">
   <% @cocktails.each do |cocktail| %>
     <div class="col-xs-12 col-sm-4">
-      <div class="card">
+    <% if @product.photo? %>
+      <div class="card" style = "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_tag @product.photo.path, width: 200, height: 300, crop: :fill %>');">
         <div class="card-description">
           <h2> <%= link_to cocktail.name.capitalize, cocktail_path(cocktail.id) %></h2>
         </div>
       </div>
+      <% else %>
+        <div class="card" style = "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+        <div class="card-description">
+          <h2> <%= link_to cocktail.name.capitalize, cocktail_path(cocktail.id) %></h2>
+        </div>
+      </div>
+    <% end %>
+
     </div>
     <% end %>
   </div>
@@ -29,3 +38,6 @@
     <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-success btn-green" %>
   </div>
 </div>
+
+
+
