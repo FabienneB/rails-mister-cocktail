@@ -1,5 +1,5 @@
 <%= simple_form_for @cocktail do |c| %>
   <%= c.input :name %>
-  <%= f.input :photo, as: :attachinary %>
+  <%= c.input :photo, as: :attachinary %>
   <%= c.submit 'Add a cocktail', class: "btn btn-success" %>
 <% end %>

@@ -1,16 +1,23 @@
 
+<div class="wrapper show-wrapper">
+  <div class="show-content">
+    <div class="description">
+      <h2>  The cocktail <%= @cocktail.name %> </h2>
+  </div>
+  </div>
+</div>
+
 <div class="container">
-  <h1> The cocktail <%= @cocktail.name %></h1>
 
   <% @cocktail.doses.each do |dose| %>
     <ul class = "list-unstyled">
-      <li> The cocktail need <%= dose.description %> of <%= dose.ingredient.name %>
+      <li> The cocktail needs <%= dose.description %> of <%= dose.ingredient.name %>
       <%= link_to "Delete a dose", dose_path(dose), method: :delete %>
       </li>
     </ul>
 
   <% end %>
-  <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
-  <%= link_to "Back", cocktails_path %>
+  <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-success" %>
+  <%= link_to "Back", cocktails_path, class: "btn btn-success" %>
 </div>
 

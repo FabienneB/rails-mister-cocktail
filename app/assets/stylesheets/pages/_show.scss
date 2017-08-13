@@ -1,21 +1,25 @@
-.wrapper {
+.show-wrapper {
 background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url('img.jpg');
 background-size: cover;
 background-position: center;
-height: 100vh;
+height: 50vh;
 display: flex;
 justify-content : center;
 align-items: center;
 margin-bottom: 15px;
 }
 
-.content {
+.show-content {
   width: 900px;
   text-align: center;
   h2 {
     font-size: 50px;
-    color: #EEF0EB;
+    color: white;
     opacity: 0.9;
     font-weight: bolder;
   }
+}
+
+.btn-green a {
+  color: white;
 }

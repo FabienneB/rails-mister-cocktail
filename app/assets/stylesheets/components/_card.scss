@@ -1,13 +1,14 @@
 .card {
   height: 175px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  // background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('mojito.jpg');
   background-size: cover !important;
   background-position: center;
   color: white;
   position: relative;
-  padding : 5px;
-  margin-top: 5px;
+  padding : 10px;
+  margin-top: 20px;
+  margin-bottom:20px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 .card-description {
@@ -19,7 +20,7 @@
   font-size: 24px;
 
   a {
-    color: #137547;
+    color: #EEF0EB;
     text-decoration: none;
     &:hover{
       text-decoration:none;
@@ -36,15 +37,20 @@
   padding : 10px;
   h1 {
     font-size: 30px;
-    color: black;
+    color: #16B84E  ;
+    text-align: center;
   }
 }
 
 .btn-green {
-  background-color: #137547;
+  background-color: #16B84E;
   margin: 5px;
 }
 
 .btn-centered {
   text-align: center;
+}
+
+.container .body {
+  background-color: #F1F7EE;
 }
